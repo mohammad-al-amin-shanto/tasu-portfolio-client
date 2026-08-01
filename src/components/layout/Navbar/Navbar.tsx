@@ -1,18 +1,20 @@
 import Container from "@/components/shared/Container";
 
+import MobileMenu from "./MobileMenu";
 import NavLogo from "./NavLogo";
 import NavMenu from "./NavMenu";
-import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   return (
-    <header className="absolute inset-x-0 top-0 z-50 py-8">
-      <Container className="flex items-center justify-between">
-        <NavLogo />
+    <header className="fixed inset-x-0 top-0 z-50 py-6">
+      <Container>
+        <div className="flex items-center justify-between">
+          <NavLogo />
 
-        <NavMenu />
+          <NavMenu />
 
-        <MobileMenu />
+          <MobileMenu />
+        </div>
       </Container>
     </header>
   );

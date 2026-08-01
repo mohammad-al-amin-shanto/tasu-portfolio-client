@@ -2,18 +2,14 @@ import { Link } from "react-router-dom";
 
 const NavLogo = () => {
   return (
-    <Link
-      to="/"
-      className="flex flex-col leading-none select-none"
-      aria-label="Tasnim Tanny Home"
-    >
-      <h2 className="font-['Clash_Display'] text-[32px] italic font-medium text-[#2B2B2B]">
+    <Link to="/" className="leading-none" aria-label="Tasnim Tanny">
+      <h1 className="font-clash text-3xl italic font-semibold tracking-tight text-[#2B2B2B]">
         Tasnim Tanny
-      </h2>
+      </h1>
 
-      <span className="text-sm tracking-[0.18em] uppercase text-neutral-600">
+      <p className="mt-1 text-xs uppercase tracking-[0.35em] text-[#6A6A6A]">
         Graphic Designer
-      </span>
+      </p>
     </Link>
   );
 };
