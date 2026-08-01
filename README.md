@@ -1,75 +1,343 @@
-# React + TypeScript + Vite
+# 🎨 Tasu Portfolio — Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <strong>A premium, modern, and production-ready portfolio platform for a Graphic Designer.</strong>
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+Built with React, TypeScript, Vite, Tailwind CSS, Redux Toolkit, RTK Query, and Framer Motion.
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Tasu Portfolio** is not just a portfolio website—it's a full-featured portfolio platform designed to showcase creative work with a premium user experience.
 
-## Expanding the ESLint configuration
+The project follows modern frontend architecture, reusable component design, accessibility standards, responsive layouts, and performance best practices.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This repository contains the **frontend application** responsible for rendering the public portfolio and the secure admin dashboard.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# 🚀 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Core
 
-```
+- React 19
+- TypeScript
+- Vite
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Styling
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Tailwind CSS v4
+- CSS Variables
+- Responsive Design
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### State Management
+
+- Redux Toolkit
+- RTK Query
+
+### Routing
+
+- React Router v7
+
+### Animations
+
+- Framer Motion
+- Lenis Smooth Scroll
+
+### Forms & Validation
+
+- React Hook Form
+- Zod
+
+### Networking
+
+- Axios
+
+### UI Utilities
+
+- Lucide React
+- Sonner
+- Embla Carousel
+- Yet Another React Lightbox
+
+---
+
+# 📁 Project Structure
 
 ```
+src
+│
+├── app
+├── assets
+├── components
+├── config
+├── constants
+├── contexts
+├── design-system
+├── features
+├── hooks
+├── layouts
+├── lib
+├── services
+├── styles
+├── types
+└── utils
+```
+
+The project follows a **Feature-Based Architecture** combined with reusable UI primitives to ensure scalability and maintainability.
+
+---
+
+# 🎯 Features
+
+## Public Website
+
+- Modern Hero Section
+- About Section
+- Portfolio Showcase
+- Project Details
+- Gallery
+- Skills
+- Experience
+- Certifications
+- Resume
+- Contact
+- Responsive Navigation
+- SEO Optimized Pages
+
+---
+
+## Admin Dashboard
+
+- Secure Authentication
+- Dashboard Overview
+- Project Management
+- Media Management
+- Skills Management
+- Experience Management
+- Certificate Management
+- Resume Management
+- Portfolio Settings
+- Contact Messages
+
+---
+
+# 🎨 UI Principles
+
+The design system follows inspiration from:
+
+- Vercel
+- Stripe
+- Apple
+- Framer
+- Linear
+- Raycast
+- OpenAI
+
+Design focuses on:
+
+- Minimalism
+- Clean spacing
+- Smooth interactions
+- Large typography
+- Elegant gradients
+- Soft shadows
+- Premium micro-interactions
+
+---
+
+# ⚡ Performance Goals
+
+- 95+ Lighthouse Performance
+- 95+ Accessibility
+- 95+ Best Practices
+- 95+ SEO
+
+Optimizations include:
+
+- Route-based Code Splitting
+- Lazy Loading
+- Optimized Images
+- Tree Shaking
+- Memoization
+- Efficient Rendering
+- Cloudinary Image Optimization
+
+---
+
+# ♿ Accessibility
+
+- Semantic HTML
+- Keyboard Navigation
+- Focus Management
+- Screen Reader Support
+- Proper ARIA Labels
+- Color Contrast Compliance
+
+---
+
+# 🔍 SEO
+
+- Dynamic Metadata
+- Open Graph
+- Twitter Cards
+- Structured Data
+- Sitemap
+- Robots.txt
+- Canonical URLs
+
+---
+
+# 📦 Installation
+
+Clone the repository.
+
+```bash
+git clone <repository-url>
+```
+
+Navigate to the client.
+
+```bash
+cd client
+```
+
+Install dependencies.
+
+```bash
+npm install
+```
+
+Run the development server.
+
+```bash
+npm run dev
+```
+
+---
+
+# 🧪 Available Scripts
+
+```bash
+npm run dev
+```
+
+Starts the development server.
+
+```bash
+npm run build
+```
+
+Creates a production build.
+
+```bash
+npm run preview
+```
+
+Previews the production build.
+
+```bash
+npm run lint
+```
+
+Runs ESLint.
+
+```bash
+npm run lint:fix
+```
+
+Automatically fixes linting issues.
+
+```bash
+npm run format
+```
+
+Formats the project using Prettier.
+
+```bash
+npm run format:check
+```
+
+Checks formatting.
+
+```bash
+npm run type-check
+```
+
+Runs TypeScript type checking.
+
+---
+
+# 📚 Architecture
+
+The application follows a modular architecture built around reusable features.
+
+```
+Feature
+│
+├── API
+├── Components
+├── Hooks
+├── Pages
+├── Schemas
+├── Types
+└── Utils
+```
+
+Shared UI components remain framework-agnostic whenever possible and are designed for reuse across multiple features.
+
+---
+
+# 🎬 Animations
+
+Animations are powered by **Framer Motion** and include:
+
+- Fade In
+- Slide Up
+- Reveal
+- Stagger
+- Scale
+- Page Transitions
+- Scroll Animations
+- Hover Interactions
+
+Animations are designed to enhance the experience without compromising performance.
+
+---
+
+# 🌐 Responsive Design
+
+The application is fully responsive across:
+
+- Mobile
+- Tablet
+- Laptop
+- Desktop
+- Ultra-Wide Displays
+
+---
+
+# 🔒 Security
+
+Although authentication is handled by the backend, the frontend follows security best practices by:
+
+- Validating user input
+- Sanitizing form data
+- Protecting private routes
+- Managing authentication state securely
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+<p align="center">
+Designed with creativity. Engineered with precision.
+</p>
