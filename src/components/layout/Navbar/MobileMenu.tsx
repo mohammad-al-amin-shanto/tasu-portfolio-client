@@ -4,10 +4,10 @@ const MobileMenu = () => {
   return (
     <button
       type="button"
-      aria-label="Open menu"
-      className="flex h-11 w-11 items-center justify-center rounded-full border border-[#A74C4C]/20 bg-white/60 text-[#A74C4C] backdrop-blur-md transition hover:bg-white lg:hidden"
+      aria-label="Open navigation menu"
+      className="flex h-9 w-9 items-center justify-center rounded-full text-[#111111] transition-colors hover:bg-white/30 lg:hidden"
     >
-      <Menu size={22} />
+      <Menu size={20} strokeWidth={1.7} />
     </button>
   );
 };

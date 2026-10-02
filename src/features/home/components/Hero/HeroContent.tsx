@@ -1,138 +1,226 @@
 import { motion } from "framer-motion";
 
-const letterAnimation = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
-};
-
 const HeroContent = () => {
   return (
-    <div className="relative z-10 flex flex-col items-center text-center">
-      {/* Small heading */}
-      <motion.p
-        variants={letterAnimation}
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 0.7, ease: "easeOut" }}
-        className="mb-1 font-serif text-[18px] font-semibold leading-none text-[#171717] sm:text-[20px] md:text-[22px]"
+    <div className="relative z-10">
+      {/* Graphic Design */}
+      <motion.h2
+        initial={{ opacity: 0, x: -15 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        className="
+          mb-1
+          pl-[2px]
+          text-left
+          font-serif
+          text-[24px]
+          font-bold
+          leading-none
+          tracking-[-0.03em]
+          text-[#111111]
+          sm:text-[28px]
+          md:text-[31px]
+        "
       >
         Graphic Design
-      </motion.p>
+      </motion.h2>
 
-      {/* Main portfolio typography */}
+      {/* PORTFOLIO */}
       <motion.div
-        initial="hidden"
-        animate="visible"
-        transition={{
-          staggerChildren: 0.08,
-          delayChildren: 0.15,
-        }}
-        className="font-serif font-normal uppercase leading-[0.76] tracking-[-0.055em] text-[#080808]"
+        initial={{ opacity: 0, scale: 0.97 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+        className="relative"
         aria-label="Portfolio"
       >
-        {/* PORT */}
-        <div className="flex items-center justify-center">
-          <motion.span
-            variants={letterAnimation}
-            className="text-[76px] sm:text-[105px] md:text-[130px] lg:text-[145px]"
+        {/*
+          Main O
+          It stretches exactly from the top of the first row
+          to the bottom of the second row.
+        */}
+        <span
+          aria-hidden="true"
+          className="
+            absolute
+            left-[35%]
+            top-0
+            bottom-0
+            z-20
+            w-[78px]
+            -translate-x-1/2
+            rounded-[50%]
+            border-[5px]
+            border-[#C72F3A]
+
+            sm:left-[31%]
+            sm:w-[90px]
+            sm:border-[6px]
+
+            md:left-[35%]
+            md:w-[102px]
+            md:border-[6px]
+
+            lg:left-[35%]
+            lg:w-[112px]
+            lg:border-[6px]
+          "
+        />
+
+        {/* ================= FIRST ROW ================= */}
+        <div
+          className="
+            flex
+            items-end
+            font-serif
+            font-bold
+            leading-[0.78]
+            tracking-[-0.075em]
+            text-[#050505]
+          "
+        >
+          {/* P */}
+          <span
+            className="
+              text-[120px]
+              sm:text-[155px]
+              md:text-[190px]
+              lg:text-[215px]
+            "
           >
             P
-          </motion.span>
+          </span>
 
-          <motion.span
-            variants={letterAnimation}
-            className="relative mx-[-2px] inline-flex h-[91px] w-[43px] items-center justify-center sm:mx-[-3px] sm:h-[125px] sm:w-[59px] md:h-[154px] md:w-[72px] lg:h-[171px] lg:w-[80px]"
+          {/* Space for main O */}
+          <span
+            aria-hidden="true"
+            className="
+              block
+              w-[78px]
+              shrink-0
+
+              sm:w-[90px]
+              md:w-[102px]
+              lg:w-[112px]
+            "
+          />
+
+          {/* RT */}
+          <span
+            className="
+              text-[120px]
+              sm:text-[155px]
+              md:text-[190px]
+              lg:text-[215px]
+            "
           >
-            <span
-              className="absolute inset-[2px] rounded-[50%] border-[3px] border-[#ff0000] sm:border-[4px]"
-              aria-hidden="true"
-            />
-
-            <span className="sr-only">O</span>
-          </motion.span>
-
-          <motion.span
-            variants={letterAnimation}
-            className="text-[76px] sm:text-[105px] md:text-[130px] lg:text-[145px]"
-          >
-            R
-          </motion.span>
-
-          <motion.span
-            variants={letterAnimation}
-            className="text-[76px] sm:text-[105px] md:text-[130px] lg:text-[145px]"
-          >
-            T
-          </motion.span>
+            RT
+          </span>
         </div>
 
-        {/* FOLIO */}
-        <div className="flex items-center justify-center">
-          <motion.span
-            variants={letterAnimation}
-            className="text-[76px] sm:text-[105px] md:text-[130px] lg:text-[145px]"
+        {/* ================= SECOND ROW ================= */}
+        <div
+          className="
+            mt-[-2px]
+            flex
+            items-end
+            font-serif
+            font-bold
+            leading-[0.78]
+            tracking-[-0.075em]
+            text-[#050505]
+          "
+        >
+          {/* F */}
+          <span
+            className="
+              text-[120px]
+              sm:text-[155px]
+              md:text-[190px]
+              lg:text-[215px]
+            "
           >
             F
-          </motion.span>
+          </span>
 
-          <motion.span
-            variants={letterAnimation}
-            className="relative mx-[-2px] inline-flex h-[91px] w-[43px] items-center justify-center sm:mx-[-3px] sm:h-[125px] sm:w-[59px] md:h-[154px] md:w-[72px] lg:h-[171px] lg:w-[80px]"
+          {/* Space for the SAME main O */}
+          <span
+            aria-hidden="true"
+            className="
+              block
+              w-[78px]
+              shrink-0
+
+              sm:w-[90px]
+              md:w-[102px]
+              lg:w-[112px]
+            "
+          />
+
+          {/* L */}
+          <span
+            className="
+              text-[120px]
+              sm:text-[155px]
+              md:text-[190px]
+              lg:text-[215px]
+            "
           >
-            <span
-              className="absolute inset-[2px] rounded-[50%] border-[3px] border-[#ff0000] sm:border-[4px]"
-              aria-hidden="true"
-            />
+            L<sup>I</sup>
+          </span>
 
-            <span className="sr-only">O</span>
-          </motion.span>
+          {/* Small O */}
+          <span
+            aria-hidden="true"
+            className="
+              ml-[3px]
+              mb-[1px]
+              inline-block
+              h-[165px]
+              w-[58px]
+              shrink-0
+              rounded-[50%]
+              border-[5px]
+              border-[#C72F3A]
 
-          <motion.span
-            variants={letterAnimation}
-            className="text-[76px] sm:text-[105px] md:text-[130px] lg:text-[145px]"
-          >
-            L
-          </motion.span>
+              sm:ml-[5px]
+              sm:h-[210px]
+              sm:w-[70px]
+              sm:border-[6px]
 
-          <motion.span
-            variants={letterAnimation}
-            className="relative mx-[-2px] inline-flex h-[91px] w-[43px] items-center justify-center sm:mx-[-3px] sm:h-[125px] sm:w-[59px] md:h-[154px] md:w-[72px] lg:h-[171px] lg:w-[80px]"
-          >
-            <span
-              className="absolute inset-[2px] rounded-[50%] border-[3px] border-[#ff0000] sm:border-[4px]"
-              aria-hidden="true"
-            />
+              md:h-[255px]
+              md:w-[82px]
 
-            <span className="sr-only">O</span>
-          </motion.span>
+              lg:h-[290px]
+              lg:w-[93px]
+            "
+          />
         </div>
       </motion.div>
 
-      {/* Designer name */}
-      <motion.h2
-        initial={{
-          opacity: 0,
-          y: 15,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 0.7,
-          delay: 0.7,
-          ease: "easeOut",
-        }}
-        className="mt-5 font-serif text-[17px] font-semibold text-[#171717] sm:text-[19px] md:text-[21px]"
+      {/* Name — aligned toward the right */}
+      <motion.p
+        initial={{ opacity: 0, x: 15 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.25 }}
+        className="
+          mt-7
+          text-right
+          font-serif
+          text-[23px]
+          font-bold
+          leading-none
+          tracking-[-0.02em]
+          text-[#111111]
+
+          sm:mt-8
+          sm:text-[27px]
+
+          md:mt-9
+          md:text-[30px]
+        "
       >
         Tasnim Azad Tanny
-      </motion.h2>
+      </motion.p>
     </div>
   );
 };

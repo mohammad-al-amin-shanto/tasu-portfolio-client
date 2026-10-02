@@ -18,27 +18,26 @@ const links = [
 
 const NavMenu = () => {
   return (
-    <nav className="hidden items-center gap-2 rounded-full bg-white/60 p-2 shadow-lg backdrop-blur-xl lg:flex">
+    <nav
+      aria-label="Main navigation"
+      className="hidden items-center gap-5 lg:flex xl:gap-7"
+    >
       {links.map((link) => (
         <NavLink
           key={link.name}
           to={link.href}
           className={({ isActive }) =>
-            `
-              rounded-full
-              px-6
-              py-3
-              text-sm
-              font-medium
-              transition-all
-              duration-300
-
-              ${
-                isActive
-                  ? "bg-[#A74C4C] text-white shadow-md"
-                  : "text-[#494949] hover:bg-white hover:text-[#A74C4C]"
-              }
-            `
+            [
+              "flex items-center justify-center",
+              "rounded-md",
+              "px-5 py-[5px]",
+              "text-[9px] font-medium",
+              "transition-all duration-200",
+              "xl:text-[10px]",
+              isActive
+                ? "bg-[#B94B4B] text-white"
+                : "text-[#111111] hover:text-[#B94B4B]",
+            ].join(" ")
           }
         >
           {link.name}
@@ -47,10 +46,11 @@ const NavMenu = () => {
 
       <NavLink
         to="/contact"
-        className="ml-3 flex items-center gap-2 rounded-full border border-[#A74C4C] px-5 py-3 text-sm font-medium text-[#A74C4C] transition hover:bg-[#A74C4C] hover:text-white"
+        className="ml-1 flex items-center gap-[2px] px-1 py-[5px] text-[9px] font-medium text-[#111111] transition-colors duration-200 hover:text-[#B94B4B] xl:text-[10px]"
       >
-        Hire Me
-        <ArrowUpRight size={18} />
+        <span>Hire me</span>
+
+        <ArrowUpRight size={12} strokeWidth={2} aria-hidden="true" />
       </NavLink>
     </nav>
   );
